@@ -1,5 +1,6 @@
 package com.example.xuqiwei.commontestproject.xt.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,10 +18,11 @@ import com.example.xuqiwei.commontestproject.eventbus.HttpEvent;
 import com.example.xuqiwei.commontestproject.eventbus.TestEvent;
 import com.example.xuqiwei.commontestproject.http.APIService;
 import com.example.xuqiwei.commontestproject.http.APIServiceImp;
+import com.example.xuqiwei.commontestproject.mvp.activities.MVPActivity;
 import com.example.xuqiwei.commontestproject.tasklist.activities.TaskListAcitiviy;
 import com.example.xuqiwei.commontestproject.xt.model.UserInfo;
+import com.example.xuqiwei.commontestproject.zuhe.activities.ZuHeActivity;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -51,6 +53,10 @@ public class XTFragment extends CommonAbstractFragment {
     TextView loginTextview;
     @BindView(R.id.loadbeancachetest_textview)
     TextView loadbeancachetestTextview;
+    @BindView(R.id.zuhetest_textview)
+    TextView zuhetestTextview;
+    @BindView(R.id.mvp_textview)
+    TextView mvpTextview;
 
     private APIService apiService;
 
@@ -157,11 +163,22 @@ public class XTFragment extends CommonAbstractFragment {
     }
 
 
-
     @OnClick(R.id.loadbeancachetest_textview)
     public void loadBeanCache() {
-        UserInfo userInfo = Tool.getBeanCache(getContext(),CacheName.userinfo_json,UserInfo.class);
+        UserInfo userInfo = Tool.getBeanCache(getContext(), CacheName.userinfo_json, UserInfo.class);
         toast(userInfo.getHospitalName());
     }
 
+
+    @OnClick(R.id.zuhetest_textview)
+    public void zuheTest() {
+        startActivity(new Intent(getActivity(), ZuHeActivity.class));
+
+    }
+
+
+    @OnClick(R.id.mvp_textview)
+    public void mvpTest() {
+        startActivity(new Intent(getActivity(), MVPActivity.class));
+    }
 }

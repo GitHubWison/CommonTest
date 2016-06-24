@@ -42,6 +42,8 @@
         <activity android:name=".xt.activity.XTActivity" />
         <activity android:name=".test.activities.TestActivity"></activity>
         <activity android:name=".tasklist.activities.TaskListAcitiviy"></activity>
+        <activity android:name=".zuhe.activities.ZuHeActivity"></activity>
+        <activity android:name=".mvp.activities.MVPActivity"></activity>
     </application>
 
 </manifest>

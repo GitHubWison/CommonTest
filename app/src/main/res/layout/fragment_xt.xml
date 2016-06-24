@@ -47,6 +47,18 @@
                 android:background="@android:color/holo_blue_light"
                 android:id="@+id/loadbeancachetest_textview"
                 android:text="获得类的缓存" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/zuhetest_textview"
+                android:text="组合控件test" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/mvp_textview"
+                android:text="mvp测试" />
         </LinearLayout>
     </ScrollView>
 

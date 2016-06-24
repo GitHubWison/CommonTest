@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.commonlibrary.fragment.CommonAbstractFragment;
 import com.example.xuqiwei.commontestproject.R;
+import com.example.xuqiwei.commontestproject.eventbus.HttpEvent;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -34,7 +35,7 @@ public class LaunchFragment extends CommonAbstractFragment {
 
     }
     @Subscribe
-    public void test()
+    public void onEventMainThread(HttpEvent event)
     {
 
     }

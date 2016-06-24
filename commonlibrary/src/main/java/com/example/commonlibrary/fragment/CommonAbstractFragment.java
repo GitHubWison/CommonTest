@@ -33,6 +33,7 @@ import com.example.commonlibrary.tools.ACache;
 import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -60,10 +61,20 @@ public abstract class CommonAbstractFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
 //        View rootView = super.onCreateView(inflater, container, savedInstanceState);
 //        inflater.inflate(R.layout.fancy_fragment, container, false);
-        EventBus.getDefault().register(this);
+
+//        View view = inflater.inflate(getFragmentLayout(), container, false);
+//        EventBus.getDefault().register(this);
+//
+//        ButterKnife.bind(this, view);
+//        initDatas();
+//        initEvents();
+//        return view;
+
         View view = inflater.inflate(getFragmentLayout(), container, false);
+        EventBus.getDefault().register(this);
         ButterKnife.bind(this, view);
         initDatas();
         initEvents();
@@ -124,6 +135,7 @@ public abstract class CommonAbstractFragment extends Fragment {
     {
         Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
     }
+
 
     public Drawable zoomDrawable(Drawable drawable, int w, int h) {
         int width = drawable.getIntrinsicWidth();

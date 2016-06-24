@@ -24,11 +24,8 @@ import com.example.commonlibrary.staticstring.CacheName;
 import com.example.commonlibrary.staticstring.CommonNetMsg;
 import com.example.commonlibrary.tools.ACache;
 
-import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import butterknife.ButterKnife;
 
 /**
  * Created by xuqiwei on 16-6-13.
@@ -38,7 +35,7 @@ public abstract class MvvmCommonFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
-
+//        initDatas();
 //        initViews();
 //        initEvents();
     }
@@ -47,16 +44,10 @@ public abstract class MvvmCommonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = initDataBindingView(inflater, container, savedInstanceState);
-        EventBus.getDefault().register(this);
-        ButterKnife.bind(this, view);
-        initDatas();
-        return view;
+        return initDataBindingView(inflater, container, savedInstanceState);
     }
 
-    public void initDatas(){
-
-    }
+//    public abstract void initDatas();
 //    public abstract void initViews();
 //    public abstract void initEvents();
     public abstract View initDataBindingView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState);
@@ -81,11 +72,7 @@ public abstract class MvvmCommonFragment extends Fragment {
     {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(!isHidden);
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        EventBus.getDefault().unregister(this);//反注册EventBus
-    }
+
 
 
 

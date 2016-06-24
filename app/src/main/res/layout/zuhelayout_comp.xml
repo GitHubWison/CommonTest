@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="zucemodel"
+            type="com.example.xuqiwei.commontestproject.model.ZhuCeCompontModel"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/show_textview"
+            android:text="@{zucemodel.nameString}"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@{zucemodel.nameString}"
+            android:id="@+id/button"
+            android:layout_below="@+id/show_textview"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</layout>
+
