@@ -1,0 +1,22 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.xuqiwei.commontestproject.tasklist.fragments.TaskListFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/pulltorefresh_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+

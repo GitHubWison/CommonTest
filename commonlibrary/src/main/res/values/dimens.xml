@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="component_margin">10dp</dimen>
+    <dimen name="component_line_margin">1dp</dimen>
+    <dimen name="double_component_line_margin">2dp</dimen>
+    <dimen name="component_half_line_margin">0.5dp</dimen>
+    <dimen name="component_padding">10dp</dimen>
+    <dimen name="task_list_padding">20dp</dimen>
+    <dimen name="task_list_half_padding">10dp</dimen>
+    <dimen name="task_list_top_text_size">20dp</dimen>
+    <dimen name="login_margin">15dp</dimen>
+    <dimen name="login_pwd_margin">20dp</dimen>
+    <dimen name="login_edittext_left_right_margin">20dp</dimen>
+    <dimen name="login_edittext_top_btm_margin">10dp</dimen>
+    <dimen name="login_padding_left_right">50dp</dimen>
+    <dimen name="login_edit_img_left">10dp</dimen>
+    <dimen name="component_edge_margin">20dp</dimen>
+    <dimen name="component_edge_double_margin">40dp</dimen>
+    <dimen name="component_edge_half_margin">10dp</dimen>
+    <dimen name="component_edge_querter_margin">5dp</dimen>
+    <dimen name="component_top_btm_padding">20dp</dimen>
+
+    <!--标题大字体-->
+    <dimen name="title_font">25dp</dimen>
+    <dimen name="dialog_tip_fone">15dp</dimen>
+
+
+    <!--字体大小开始-->
+    <integer name="font_basesize">30</integer>
+    <integer name="font_littlesize">10</integer>
+    <integer name="font_15size">15</integer>
+    <integer name="font_smallsize">20</integer>
+    <integer name="font_small1">25</integer>
+
+    <dimen name="font_basesize">30sp</dimen>
+    <dimen name="font_littlesize">10sp</dimen>
+    <dimen name="font_15size">15sp</dimen>
+    <dimen name="font_smallsize">20sp</dimen>
+    <dimen name="font_small1">25sp</dimen>
+
+    <dimen name="font_15sp">14sp</dimen>
+    <!--字体大小结束-->
+    <!--输入框的高度-->
+    <dimen name="input_height">50dp</dimen>
+    <dimen name="input_hor_height">90dp</dimen>
+    <dimen name="input_title_height">40dp</dimen>
+    <dimen name="drug_list_item_height">80dp</dimen>
+
+    <dimen name="zuzhong_item_height">100dp</dimen>
+    <dimen name="zuzhong_big_fontsize">45sp</dimen>
+    <dimen name="zuzhong_bigger_fontsize">60sp</dimen>
+
+</resources>

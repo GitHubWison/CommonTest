@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".xt.fragments.XTFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/savedomain_textview"
+                android:text="存取domain" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/testnet_textview"
+                android:text="测试网络" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/bf01_textview"
+                android:text="bufferknife01" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/bf02_textview"
+                android:text="bufferknife02" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/login_textview"
+                android:text="登陆" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/loadbeancachetest_textview"
+                android:text="获得类的缓存" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

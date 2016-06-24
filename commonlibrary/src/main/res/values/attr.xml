@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatusButton">
+        <attr name="notClickBgColor" format="color"/>
+        <attr name="clickedBgColor" format="color"/>
+        <attr name="notClickFontColor" format="color"/>
+        <attr name="clickedFontColor" format="color"/>
+        <!-- 可点状态下的图片-->
+        <attr name="clickAbleImage" format="reference"/>
+        <!--不可点状态下的图片-->
+        <attr name="unableClickImage" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusImageButton">
+        <attr name="normalBg" format="color"/>
+        <attr name="normalPic" format="reference"/>
+        <attr name="clickedPic" format="reference"/>
+        <attr name="funcText" format="string"/>
+
+    </declare-styleable>
+    <declare-styleable name="MutableChoseButton">
+        <attr name="textTip" format="string"/>
+        <attr name="hasEditText" format="boolean"/>
+        <attr name="isbuttonclose" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="SingleChoseButton">
+        <attr name="textTipSingle" format="string"/>
+        <attr name="isRudioRight" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusLeftImgButton">
+        <attr name="normalBackground" format="color"/>
+        <attr name="normalPicture" format="reference"/>
+        <attr name="clickedPicture" format="reference"/>
+        <attr name="showTexts" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="CommonImageButton">
+        <!--点击前的背景色-->
+        <attr name="lightbg" format="color"/>
+        <!--点击后的背景色-->
+        <attr name="fadebg" format="color"/>
+        <!--点击前的图片-->
+        <attr name="lightimg" format="reference"/>
+        <!--点击后的图片-->
+        <attr name="fadeimg" format="reference"/>
+        <!--文字-->
+        <attr name="textforimgbtn" format="string"/>
+        <!--点击前的字体颜色-->
+        <attr name="lighttextcolor" format="color"/>
+        <!--点击后的字体颜色-->
+        <attr name="fadetextcolor" format="color"/>
+
+        <!--图片的位置-->
+        <attr name="imglocation" format="integer"/>
+        <!--文字的大小-->
+        <attr name="textsizeforimgbtn" format="reference"/>
+        <!--变暗后的背景图-->
+        <attr name="fadebgdrawable" format="reference"/>
+
+    </declare-styleable>
+    <declare-styleable name="CommonTextView">
+
+        <!--数据库列名-->
+        <attr name="ComTv_TABLE_COLUMN_NAME" format="string"/>
+        <!--数据库表名-->
+        <attr name="ComTv_TABLE_NAME" format="string"/>
+        <!--文字的大小-->
+        <attr name="textviewsize" format="integer"/>
+        <!--是否为长文本-->
+        <attr name="islongtext" format="boolean"/>
+        <!--长文本是否为必输项-->
+        <attr name="isneedwrite" format="boolean"/>
+        <attr name="comtvmaxlength" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="TimeEdittext">
+        <!--数据库列名-->
+        <attr name="TABLE_COLUMN_NAME" format="string"/>
+        <!--数据库表名-->
+        <attr name="TABLE_NAME" format="string"/>
+        <!--文字的内容-->
+        <attr name="hinttext" format="string"/>
+        <!--需要输入文字的提示-->
+        <attr name="titletext" format="string"/>
+        <!--定义主体的布局-->
+        <attr name="commtextview_isHorizal" format="boolean"/>
+        <!--是否需要时分秒-->
+        <attr name="hasHMS" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CommonInputEdittext">
+        <!--数据库列名-->
+        <attr name="ComInput_TABLE_COLUMN_NAME" format="string"/>
+        <!--数据库表名-->
+        <attr name="ComInput_TABLE_NAME" format="string"/>
+        <!--文字的内容-->
+        <attr name="hintinputtext" format="string"/>
+        <!--需要输入文字的提示-->
+        <attr name="titleinputtext" format="string"/>
+        <!--判定整体结构是不是horizorl-->
+        <attr name="isHorizontal" format="boolean"/>
+        <attr name="isNumber" format="boolean"/>
+        <!--CommonInputEdittext最大长度-->
+        <attr name="commaxlength" format="integer"/>
+        <!--是否可输入-->
+        <attr name="iseditenable" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddAndMinusEdittext">
+        <!--需要输入文字的提示-->
+        <attr name="titletips" format="string"/>
+        <attr name="hinttips" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CommonMutConfirmButton">
+        <!--需要输入文字的提示-->
+        <attr name="muttips" format="string"/>
+        <!--提示文字的大小-->
+        <attr name="muttipssize" format="integer"/>
+        <!--提示文字的颜色-->
+        <attr name="muttipscolor" format="color"/>
+        <!--是否贴近显示-->
+        <attr name="isclose" format="boolean"/>
+        <!--数据库名-->
+        <attr name="ComMutConBut_TABLE_NAME" format="string"/>
+        <!--列名-->
+        <attr name="ComMutConBut_TABLE_COLUMN_NAME" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CommonSingleConfirmButton">
+        <!--需要输入文字的提示-->
+        <attr name="singletips" format="string"/>
+        <!--toggle图片是否在左边-->
+        <attr name="istoggleimgleft" format="boolean"/>
+        <!--文字的大小-->
+        <attr name="singletipssize" format="integer"/>
+        <!--提示文字的颜色-->
+        <attr name="singletipscolor" format="color"/>
+        <!--数据库名-->
+        <attr name="ComSingleConBut_TABLE_NAME" format="string"/>
+        <!--列名-->
+        <attr name="ComSingleConBut_TABLE_COLUMN_NAME" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CommonSpinnerWithEdit">
+        <!--数据库名-->
+        <attr name="ComSpinWiEdit_TABLE_NAME" format="string"/>
+        <!--列名-->
+        <attr name="ComSpinWiEdit_TABLE_COLUMN_NAME" format="string"/>
+        <!--从第几位开始-->
+        <attr name="startfrom" format="integer"/>
+        <!--是否允许编辑-->
+        <attr name="iseditable" format="boolean"/>
+        <!--文字提醒-->
+        <attr name="edithint" format="string"/>
+        <!--编辑模式：0：没有提示框；1：有提示框-->
+        <attr name="editmodel" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="CommonSpinner">
+        <!--数据库名-->
+        <attr name="ComSpin_TABLE_NAME" format="string"/>
+        <!--表名-->
+        <attr name="ComSpin_TABLE_COLUMN_NAME" format="string"/>
+
+
+    </declare-styleable>
+</resources>

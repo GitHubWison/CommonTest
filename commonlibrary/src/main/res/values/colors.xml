@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightRedColor">#DB7093</color>
+    <color name="blackColor">#000000</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="grayColor">#C7C7C7</color>
+    <color name="lightBlueColor">#AB82FF</color>
+    <!-- 任务列表的背景颜色-->
+    <color name="task_bg1">#61B0E9</color>
+    <color name="task_bg2">#7F60E9</color>
+    <color name="task_bg3">#58D369</color>
+    <color name="task_bg4">#EA7E62</color>
+
+    <!--整体的背景色-->
+    <color name="app_bg_color">#D1E3E7</color>
+    <!--app的主色调-->
+    <color name="app_main_color">#61b0e9</color>
+    <color name="status_button_clicked_bg">#cccccc</color>
+    <color name="status_button_clicked_text">#999999</color>
+    <!--提示框-->
+    <color name="tip_top_bg">#b7ac97</color>
+    <color name="tip_btm_bg">#f4f2e7</color>
+    <color name="tip_btm_button">#61b0e9</color>
+    <color name="half_trans">#e0000000</color>
+    <color name="tips_color">#808080</color>
+    <!--修改病历-->
+    <!--左侧的选项的背景色-->
+    <color name="fun_list_bg">#1f2326</color>
+    <color name="fun_list_test_light">#6f7e83</color>
+    <color name="fun_list_test_fade">#fff</color>
+
+    <!--滑动listview滑动部分的背景色-->
+    <color name="list_slide_bg">#FF5534</color>
+    <color name="task_list_item_bg">#e8f2f4</color>
+    <color name="task_list_item_top_text_color">#4c4c4c</color>
+    <color name="task_list_item_middle_text_color">#999999</color>
+    <!--卒中开始-->
+    <color name="zuzhong_textred">#fe0005</color>
+
+    <color name="jkda_bg_color">#FDE9DE</color>
+</resources>

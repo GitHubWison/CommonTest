@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.xuqiwei.commontestproject.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:id="@+id/toRetrofitActivity"
+        android:text="toRetrofitActivity" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/toxttest_textviewe"
+        android:background="@android:color/holo_red_dark"
+        android:text="胸痛路径测试"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/tomodeltest_textviewe"
+        android:background="@android:color/holo_blue_light"
+        android:text="annotation测试页面"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/testbfk_textviewe"
+        android:background="@android:color/holo_blue_light"
+        android:text="测试bufk"
+        />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="patient"
+            type="com.example.xuqiwei.commontestproject.tasklist.models.PatientModel"/>
+        <variable
+            name="adapter"
+            type="com.example.xuqiwei.commontestproject.tasklist.adapter.TaskListAdapter" />
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{`姓名：`+patient.NAME}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{`性别：`+patient.GENDER}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{`年龄：`+patient.AGE}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{`地址：`+patient.ADDRESS}"/>
+
+    </LinearLayout>
+</layout>
+

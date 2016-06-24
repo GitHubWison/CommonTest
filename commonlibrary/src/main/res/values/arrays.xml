@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>请选择医院</item>
+        <item>苏大附属第一医院</item>
+        <item>苏大附属第二医院 </item>
+        <item>苏大附属第三医院</item>
+        <item>苏大附属第四医院</item>
+
+    </string-array>
+</resources>
