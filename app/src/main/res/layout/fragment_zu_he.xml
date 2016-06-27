@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="zuhe"
+            type="com.example.xuqiwei.commontestproject.zuhe.models.ZuHeModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:test ="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.xuqiwei.commontestproject.zuhe.fragments.ZuHeFragment">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <!-- TODO: Update blank fragment layout -->
+                <com.example.commonlibrary.components.SingleChooseButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    test:singlechoose_title="胸痛"
+                    test:singlechoose_isright="false"
+                    android:id="@+id/xt_singlechoosebutton"
+                    />
+                <com.example.commonlibrary.components.MutableChooseButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    test:mutablechoose_title="胸痛"
+                    test:mutablechoose_isright="true"
+                    android:id="@+id/xt_mutablechoosebutton"
+                    />
+                <com.example.commonlibrary.components.TimeSelector
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    test:timeselector_title="选择日期"
+                    test:timeselector_istitleleft="true"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/pinyin_button"
+                    android:text="拼音测试"
+                    />
+                <com.example.commonlibrary.components.CommonSpinnerWithEditor
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    />
+                <com.example.commonlibrary.components.CommonSpinnerWithEditor
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>
+
