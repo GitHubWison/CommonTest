@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/listview_commonspinnerpopwindow"-->
+        <!--&gt;-->
+
+    <!--</ListView>-->
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="New Text"
+        android:background="@android:color/holo_green_dark"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

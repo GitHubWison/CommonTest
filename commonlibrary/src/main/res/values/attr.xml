@@ -16,4 +16,8 @@
         <attr name="timeselector_isshowtime" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CommonSpinnerWithEditor">
+        <attr name="commonspinnerwitheditor_title" format="string"/>
+        <attr name="commonspinnerwitheditor_istitleleft" format="boolean"/>
+    </declare-styleable>
 </resources>

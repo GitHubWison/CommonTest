@@ -11,12 +11,16 @@ import android.widget.Button;
 import com.example.commonlibrary.commoninterface.ComponentOnClickListener;
 import com.example.commonlibrary.components.MutableChooseButton;
 import com.example.commonlibrary.components.SingleChooseButton;
+import com.example.commonlibrary.dialog.CommonSinnerPopWindow;
 import com.example.commonlibrary.fragment.CommonAbstractFragment;
+import com.example.commonlibrary.model.DictionaryItem;
 import com.example.xuqiwei.commontestproject.R;
 import com.example.xuqiwei.commontestproject.eventbus.HttpEvent;
 import com.github.promeg.pinyinhelper.Pinyin;
 
 import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,5 +81,11 @@ public class ZuHeFragment extends CommonAbstractFragment {
     @OnClick(R.id.pinyin_button)
     public void pinyinClicked() {
         printLog(Pinyin.toPinyin('谁').substring(0,1));
+        new CommonSinnerPopWindow(getContext(), pinyinButton, new ArrayList<DictionaryItem>(), new CommonSinnerPopWindow.CommonSpinnnerPopWindowListener() {
+            @Override
+            public void onSelected(String aaa) {
+
+            }
+        }).showPopupWindow();
     }
 }

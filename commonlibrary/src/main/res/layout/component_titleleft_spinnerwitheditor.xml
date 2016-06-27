@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="123"
+        android:layout_marginRight="@dimen/component_edge_half_margin"
+        android:gravity="center"
+        android:id="@+id/title_spinnerwitheditor"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/title_spinnerwitheditor"
+        android:paddingLeft="@dimen/component_edge_half_margin"
+        android:paddingRight="@dimen/component_edge_half_margin"
+        android:background="@drawable/input_bg"
+        android:layout_toEndOf="@+id/title_spinnerwitheditor">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/font_small1"
+            android:id="@+id/inputedittext_spinnerwitheditor"
+            android:background="@null"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pull"
+            android:id="@+id/pullbutton_spinnerwitheditor" />
+    </LinearLayout>
+</RelativeLayout>
