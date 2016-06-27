@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/component_edge_margin"
+        android:paddingRight="@dimen/component_edge_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/whiteColor"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/whiteColor"
+            android:layout_marginBottom="@dimen/component_edge_margin"
+            android:layout_marginTop="@dimen/component_edge_margin"
+
+            >
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnersShown="false"
+                android:id="@+id/datePicker" />
+            <LinearLayout
+                android:id="@+id/hms_linearlayout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/time_dialog_bg">
+                <NumberPicker
+                    android:layout_width="wrap_content"
+
+                    android:id="@+id/hour_time_picker"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_basesize"
+                    android:text=":"
+                    />
+
+                <NumberPicker
+                    android:layout_width="wrap_content"
+                    android:id="@+id/min_time_picker"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_basesize"
+                    android:text=":"
+                    />
+                <NumberPicker
+                    android:layout_width="wrap_content"
+                    android:id="@+id/sec_time_picker"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/double_component_line_margin"
+            android:background="@color/task_bg2"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/component_edge_margin"
+            android:layout_marginBottom="@dimen/component_edge_margin"
+
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/sure_commontextview"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/component_edge_half_margin"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_basesize"
+                android:background="@color/task_bg2"
+                android:text="确定"
+                android:gravity="center"
+                android:textColor="@color/whiteColor"
+                />
+            <TextView
+                android:id="@+id/cancel_commontextview"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_basesize"
+                android:background="@color/task_bg2"
+                android:layout_marginLeft="@dimen/component_edge_margin"
+                android:layout_marginRight="@dimen/component_edge_margin"
+                android:gravity="center"
+                android:padding="@dimen/component_edge_half_margin"
+                android:text="取消"
+                android:textColor="@color/whiteColor"
+                />
+            <TextView
+                android:id="@+id/clear_commontextview"
+                android:padding="@dimen/component_edge_half_margin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_basesize"
+                android:textColor="@color/whiteColor"
+                android:gravity="center"
+                android:background="@color/list_slide_bg"
+                android:text="清空"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

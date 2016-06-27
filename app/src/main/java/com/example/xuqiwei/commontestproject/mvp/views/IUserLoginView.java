@@ -6,6 +6,7 @@ import com.example.xuqiwei.commontestproject.mvp.models.User;
  * Created by xuqiwei on 16-6-24.
  */
 public interface IUserLoginView {
+//   登陆可能用到的方法
     String getUserName();
 
     String getPassword();

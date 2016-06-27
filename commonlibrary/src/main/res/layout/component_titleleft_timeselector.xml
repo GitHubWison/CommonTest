@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_timeselector"
+    android:paddingLeft="@dimen/component_edge_half_margin"
+    android:paddingRight="@dimen/component_edge_half_margin"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/input_height"
+        android:text="New Text"
+        android:gravity="center"
+        android:textSize="@dimen/font_small1"
+        android:id="@+id/title_timeselector"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="@dimen/component_edge_half_margin"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:background="@drawable/input_bg"
+        android:paddingRight="@dimen/component_edge_half_margin"
+        android:paddingLeft="@dimen/component_edge_half_margin"
+        android:layout_toRightOf="@+id/title_timeselector"
+        android:layout_toEndOf="@+id/title_timeselector">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/font_small1"
+            android:id="@+id/showdate_timeselector" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock" />
+
+    </LinearLayout>
+</RelativeLayout>
