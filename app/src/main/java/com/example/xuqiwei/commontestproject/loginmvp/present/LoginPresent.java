@@ -5,4 +5,5 @@ package com.example.xuqiwei.commontestproject.loginmvp.present;
  */
 public interface LoginPresent {
     void checkUserNamePassWord(String userName,String passWord);
+    void detroy();
 }

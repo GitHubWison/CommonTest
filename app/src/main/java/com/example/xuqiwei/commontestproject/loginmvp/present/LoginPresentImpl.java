@@ -22,22 +22,35 @@ public class LoginPresentImpl implements LoginPresent{
         loginInteractor.login(userName, passWord, new LoginInteractor.LoginListener() {
             @Override
             public void loginSuccess() {
-                loginView.loginSuccessTips();
-                loginView.hideLoading();
+                if (loginView!=null)
+                {
+                    loginView.loginSuccessTips();
+                    loginView.hideLoading();
+                }
+
             }
 
             @Override
             public void loginUserNameFailure() {
-                loginView.setUserNameError();
-                loginView.hideLoading();
+                if (loginView!=null) {
+                    loginView.setUserNameError();
+                    loginView.hideLoading();
+                }
             }
 
             @Override
             public void loginPassWordFailure() {
-                loginView.setPassWordError();
-                loginView.hideLoading();
+                if (loginView!=null) {
+                    loginView.setPassWordError();
+                    loginView.hideLoading();
+                }
             }
         });
+    }
+
+    @Override
+    public void detroy() {
+        loginView = null;
     }
 
 }

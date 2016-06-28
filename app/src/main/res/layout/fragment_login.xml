@@ -33,6 +33,12 @@
         android:visibility="invisible"
         android:background="@android:color/holo_blue_light"
         android:layout_gravity="center_horizontal" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="弹出popupWindow"
+        android:id="@+id/showpopwin_button"
+        />
 
 
 </LinearLayout>

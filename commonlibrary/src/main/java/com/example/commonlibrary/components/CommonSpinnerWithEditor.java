@@ -1,13 +1,18 @@
 package com.example.commonlibrary.components;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.BitmapDrawable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -36,6 +41,10 @@ public class CommonSpinnerWithEditor extends RelativeLayout{
     private TextView title_spinnerwitheditor;
     private EditText inputedittext_spinnerwitheditor;
     private ImageView pullbutton_spinnerwitheditor;
+    private LinearLayout inputspace_linearlayout;
+    private PopupWindow listPopupWindow;
+    private CommonSinnerPopWindow commonSinnerPopWindow;
+    private CommonSpinnerWithEditor commonSpinnerWithEditor;
     public CommonSpinnerWithEditor(Context context) {
         super(context);
         initResources(context,null);
@@ -63,6 +72,7 @@ public class CommonSpinnerWithEditor extends RelativeLayout{
     private void initResources(Context context, AttributeSet attrs)
     {
         this.context = context;
+        commonSpinnerWithEditor = this;
         initAttrs(context, attrs);
         initViews();
         initDatas();
@@ -86,34 +96,33 @@ public class CommonSpinnerWithEditor extends RelativeLayout{
         title_spinnerwitheditor = (TextView)findViewById(R.id.title_spinnerwitheditor);
         inputedittext_spinnerwitheditor = (EditText)findViewById(R.id.inputedittext_spinnerwitheditor);
         pullbutton_spinnerwitheditor = (ImageView) findViewById(R.id.pullbutton_spinnerwitheditor);
+        inputspace_linearlayout = (LinearLayout)findViewById(R.id.inputspace_linearlayout);
 
 
     }
 
     private void initDatas() {
-
+        List<DictionaryItem> dictionaryItems = new ArrayList<>();
+        dictionaryItems.add(new DictionaryItem("001","氯苯那敏"));
+        dictionaryItems.add(new DictionaryItem("001","玻丽玛朗"));
+        dictionaryItems.add(new DictionaryItem("001","地氯雷他定"));
+        dictionaryItems.add(new DictionaryItem("001","氯雷他定"));
+        commonSinnerPopWindow = new CommonSinnerPopWindow(context,dictionaryItems);
     }
 
     private void initEvent() {
-        inputedittext_spinnerwitheditor.setOnFocusChangeListener(new OnFocusChangeListener() {
+        pullbutton_spinnerwitheditor.setOnClickListener(new OnClickListener() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if (b)
-                {
-                    Tool.printDebugLog(context,"OnFocusChangeListener","获得了焦点");
-                    List<DictionaryItem> dictionaryItems = new ArrayList<DictionaryItem>();
-                    for (int i=0;i<10;i++)
-                    {
-                        DictionaryItem dictionaryItem = new DictionaryItem("00"+i,"item_"+i);
-                        dictionaryItems.add(dictionaryItem);
-                    }
-                    new CommonSinnerPopWindow(context, inputedittext_spinnerwitheditor, dictionaryItems, new CommonSinnerPopWindow.CommonSpinnnerPopWindowListener() {
-                        @Override
-                        public void onSelected(String aaa) {
+            public void onClick(View view) {
+                commonSinnerPopWindow.showPopupWindow(inputspace_linearlayout);
+                commonSinnerPopWindow.findItemByPy("");
+            }
+        });
 
-                        }
-                    }).showPopupWindow();
-                }
+        commonSinnerPopWindow.setCommonSinnerListViewListener(new CommonSinnerPopWindow.CommonSinnerListViewListener() {
+            @Override
+            public void onListItemClicked(DictionaryItem dictionaryItem) {
+                inputedittext_spinnerwitheditor.setText(dictionaryItem.getDicName());
             }
         });
         inputedittext_spinnerwitheditor.addTextChangedListener(new TextWatcher() {
@@ -124,8 +133,9 @@ public class CommonSpinnerWithEditor extends RelativeLayout{
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                Tool.printDebugLog(context,"charSequence",charSequence.toString());
 
+                commonSinnerPopWindow.showPopupWindow(inputspace_linearlayout);
+                commonSinnerPopWindow.findItemByPy(charSequence.toString());
             }
 
             @Override
@@ -133,6 +143,5 @@ public class CommonSpinnerWithEditor extends RelativeLayout{
 
             }
         });
-
     }
 }

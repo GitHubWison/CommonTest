@@ -1,12 +1,16 @@
 package com.example.xuqiwei.commontestproject.zuhe.fragments;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.commonlibrary.commoninterface.ComponentOnClickListener;
 import com.example.commonlibrary.components.MutableChooseButton;
@@ -81,11 +85,16 @@ public class ZuHeFragment extends CommonAbstractFragment {
     @OnClick(R.id.pinyin_button)
     public void pinyinClicked() {
         printLog(Pinyin.toPinyin('谁').substring(0,1));
-        new CommonSinnerPopWindow(getContext(), pinyinButton, new ArrayList<DictionaryItem>(), new CommonSinnerPopWindow.CommonSpinnnerPopWindowListener() {
-            @Override
-            public void onSelected(String aaa) {
-
-            }
-        }).showPopupWindow();
+        String ytstring = "阿士匹灵";
+        char[] chname = ytstring.toCharArray();
+//        printLog(ytstring.split("").length+"");
+//        String[] ytarray = ytstring.split("");
+        for (int i=1;i<chname.length;i++)
+        {
+//            printLog("****"+ytarray[i]);
+            Log.d("***",chname[i]+"");
+        }
+//        CommonSinnerPopWindow commonSinnerPopWindow = new CommonSinnerPopWindow(getContext(),pinyinButton);
+//        commonSinnerPopWindow.showPopupWindow(pinyinButton);
     }
 }
