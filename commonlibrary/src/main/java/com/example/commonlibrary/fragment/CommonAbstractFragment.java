@@ -74,7 +74,7 @@ public abstract class CommonAbstractFragment extends Fragment {
 //        return view;
 
         View view = inflater.inflate(getFragmentLayout(), container, false);
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
         ButterKnife.bind(this, view);
         initDatas();
         initEvents();

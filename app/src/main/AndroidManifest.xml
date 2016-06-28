@@ -43,7 +43,8 @@
         <activity android:name=".test.activities.TestActivity"></activity>
         <activity android:name=".tasklist.activities.TaskListAcitiviy"></activity>
         <activity android:name=".zuhe.activities.ZuHeActivity"></activity>
-        <activity android:name=".mvp.activities.MVPActivity"></activity>
+        <activity android:name=".loginmvp.view.activities.LoginActivity"></activity>
+
     </application>
 
 </manifest>

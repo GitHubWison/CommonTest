@@ -18,7 +18,8 @@ import com.example.xuqiwei.commontestproject.eventbus.HttpEvent;
 import com.example.xuqiwei.commontestproject.eventbus.TestEvent;
 import com.example.xuqiwei.commontestproject.http.APIService;
 import com.example.xuqiwei.commontestproject.http.APIServiceImp;
-import com.example.xuqiwei.commontestproject.mvp.activities.MVPActivity;
+//import com.example.xuqiwei.commontestproject.mvp.activities.MVPActivity;
+import com.example.xuqiwei.commontestproject.loginmvp.view.activities.LoginActivity;
 import com.example.xuqiwei.commontestproject.tasklist.activities.TaskListAcitiviy;
 import com.example.xuqiwei.commontestproject.xt.model.UserInfo;
 import com.example.xuqiwei.commontestproject.zuhe.activities.ZuHeActivity;
@@ -179,6 +180,7 @@ public class XTFragment extends CommonAbstractFragment {
 
     @OnClick(R.id.mvp_textview)
     public void mvpTest() {
-        startActivity(new Intent(getActivity(), MVPActivity.class));
+//        startActivity(new Intent(getActivity(), MVPActivity.class));
+        toActivity(LoginActivity.class);
     }
 }

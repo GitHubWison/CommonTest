@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.xuqiwei.commontestproject.loginmvp.view.fragments.LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/uname_edittext"
+        android:hint="用户名"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="密码"
+        android:id="@+id/pword_edittext"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="登录"
+        android:id="@+id/sub_button"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/loading_progressbar"
+        android:visibility="invisible"
+        android:background="@android:color/holo_blue_light"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
