@@ -3,15 +3,11 @@ package com.example.xuqiwei.commontestproject.loginmvp.view.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -23,7 +19,6 @@ import com.example.xuqiwei.commontestproject.loginmvp.present.LoginPresentImpl;
 import com.example.xuqiwei.commontestproject.loginmvp.view.LoginView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -57,7 +52,7 @@ public class LoginFragment extends CommonAbstractFragment implements LoginView {
 
     @Override
     public int getFragmentLayout() {
-        return R.layout.fragment_login;
+        return R.layout.fragment_common_login;
     }
 
     @OnClick(R.id.sub_button)

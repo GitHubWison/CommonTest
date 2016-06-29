@@ -20,4 +20,11 @@
         <attr name="commonspinnerwitheditor_title" format="string"/>
         <attr name="commonspinnerwitheditor_istitleleft" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="CheckBoxButton">
+        <attr name="checkboxbutton_title" format="string"/>
+        <attr name="checkboxbutton_titlecolor" format="color"/>
+        <attr name="checkboxbutton_isselected" format="boolean"/>
+    </declare-styleable>
+
 </resources>
