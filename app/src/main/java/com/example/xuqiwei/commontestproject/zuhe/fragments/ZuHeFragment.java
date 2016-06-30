@@ -1,30 +1,25 @@
 package com.example.xuqiwei.commontestproject.zuhe.fragments;
 
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import com.example.commonlibrary.commoninterface.ComponentOnClickListener;
 import com.example.commonlibrary.components.MutableChooseButton;
 import com.example.commonlibrary.components.SingleChooseButton;
-import com.example.commonlibrary.dialog.CommonSinnerPopWindow;
 import com.example.commonlibrary.fragment.CommonAbstractFragment;
-import com.example.commonlibrary.model.DictionaryItem;
 import com.example.xuqiwei.commontestproject.R;
 import com.example.xuqiwei.commontestproject.eventbus.HttpEvent;
 import com.github.promeg.pinyinhelper.Pinyin;
 
 import org.greenrobot.eventbus.Subscribe;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,6 +35,18 @@ public class ZuHeFragment extends CommonAbstractFragment {
     MutableChooseButton xtMutablechoosebutton;
     @BindView(R.id.pinyin_button)
     Button pinyinButton;
+    @BindView(R.id.edit_01)
+    EditText edit01;
+    @BindView(R.id.edit_02)
+    EditText edit02;
+    @BindView(R.id.edit_03)
+    EditText edit03;
+    @BindView(R.id.edit_04)
+    EditText edit04;
+    @BindView(R.id.edit_05)
+    EditText edit05;
+    @BindView(R.id.edit_06)
+    EditText edit06;
 //    private SingleChooseButton xt_singlechoosebutton;
 
     public ZuHeFragment() {
@@ -68,6 +75,60 @@ public class ZuHeFragment extends CommonAbstractFragment {
 
             }
         });
+        edit01.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        edit02.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+        edit03.setImeOptions(EditorInfo.IME_ACTION_NEXT);
+//        edit01.setNextFocusForwardId(R.id.edit_02);
+
+//        edit02.setNextFocusForwardId(R.id.edit_03);
+//        edit01.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+//                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+//                    edit02.requestFocus();
+//                    edit02.requestFocusFromTouch();
+//                    return true;
+//
+//                }
+//                return false;
+//            }
+//        });
+//        edit02.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+//                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+//                    edit03.requestFocus();
+//                    edit03.requestFocusFromTouch();
+//                    return true;
+//
+//                }
+//                return false;
+//            }
+//        });
+//        edit04.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+//                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+//                    edit05.requestFocus();
+//                    edit05.requestFocusFromTouch();
+//                    return true;
+//
+//                }
+//                return false;
+//            }
+//        });
+//        edit05.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+//                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+//                    edit06.requestFocus();
+//                    edit06.requestFocusFromTouch();
+//                    return true;
+//
+//                }
+//                return false;
+//            }
+//        });
     }
 
     @Subscribe
@@ -84,17 +145,18 @@ public class ZuHeFragment extends CommonAbstractFragment {
 
     @OnClick(R.id.pinyin_button)
     public void pinyinClicked() {
-        printLog(Pinyin.toPinyin('谁').substring(0,1));
+        printLog(Pinyin.toPinyin('谁').substring(0, 1));
         String ytstring = "阿士匹灵";
         char[] chname = ytstring.toCharArray();
 //        printLog(ytstring.split("").length+"");
 //        String[] ytarray = ytstring.split("");
-        for (int i=1;i<chname.length;i++)
-        {
+        for (int i = 1; i < chname.length; i++) {
 //            printLog("****"+ytarray[i]);
-            Log.d("***",chname[i]+"");
+            Log.d("***", chname[i] + "");
         }
 //        CommonSinnerPopWindow commonSinnerPopWindow = new CommonSinnerPopWindow(getContext(),pinyinButton);
 //        commonSinnerPopWindow.showPopupWindow(pinyinButton);
     }
+
+
 }
